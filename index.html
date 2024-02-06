@@ -9,6 +9,7 @@
   <script src="script.js" defer></script>
 </head>
 <body>
+  <input type="file" accept="video/*" id="videoFileInput" onchange="loadVideo(this)">
   <div class="video-container paused" data-volume-level="high">
     <img class="thumbnail-img">
     <div class="video-controls-container">
@@ -77,8 +78,7 @@
         </button>
       </div>
     </div>
-    <video src="assets/Video.mp4">
-      <track kind="captions" srclang="en" src="assets/subtitles.vtt">
+    <video id="videoElement">
     </video>
   </div>
 </body>
